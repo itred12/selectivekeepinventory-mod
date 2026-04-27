@@ -135,6 +135,10 @@ dependencies {
 
     // implementation("curse.maven:accessories-938917:7583320")
 
+    // Gravestones
+    compileOnly("curse.maven:gravestone-238551:7099728")
+    localRuntime("curse.maven:gravestone-238551:7099728")
+
     // Gravestones-Curios compat
     compileOnly("curse.maven:gravestonecurioscompat-1139062:6201440")
     localRuntime("curse.maven:gravestonecurioscompat-1139062:6201440")

@@ -17,7 +17,8 @@
   "message.selectivekeepinventory.querykeepinventory": "SelectiveKeepInventory for %s is set to: %s",
 
   "message.selectivekeepinventory.alreadyenabled": "SelectiveKeepInventory was already enabled for %s!",
-  "message.selectivekeepinventory.alreadydisabled": "SelectiveKeepInventory was already disabled for %s!"
+  "message.selectivekeepinventory.alreadydisabled": "SelectiveKeepInventory was already disabled for %s!",
+  "selectivekeepinventory.config.disable_gravestones": "Disable Gravestones"
 
 
 }
