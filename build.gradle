@@ -133,8 +133,6 @@ dependencies {
     // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
     // localRuntime "mezz.jei:jei-${mc_version}-neoforge:${jei_version}"
 
-    // implementation("curse.maven:accessories-938917:7583320")
-
     // Gravestones
     compileOnly("curse.maven:gravestone-238551:7099728")
     localRuntime("curse.maven:gravestone-238551:7099728")
@@ -155,16 +153,11 @@ dependencies {
     compileOnly("curse.maven:owo-532610:6785734")
     localRuntime("curse.maven:owo-532610:6785734")
 
-    // Example mod dependency using a mod jar from ./libs with a flat dir repository
-    // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
-    // The group id is ignored when searching -- in this case, it is "blank"
-    // implementation "blank:coolmod-${mc_version}:${coolmod_version}"
+    // aether (also has its own inventory section I'll prob have to account for)
+    // Or not??? It just works lol. Nice.
+    compileOnly("curse.maven:aether-255308:7043502")
+    localRuntime("curse.maven:aether-255308:7043502")
 
-    // Example mod dependency using a file as dependency
-    // implementation files("libs/coolmod-${mc_version}-${coolmod_version}.jar")
-
-    // Example project dependency using a sister or child project:
-    // implementation project(":myproject")
 
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html

@@ -18,7 +18,14 @@
 
   "message.selectivekeepinventory.alreadyenabled": "SelectiveKeepInventory was already enabled for %s!",
   "message.selectivekeepinventory.alreadydisabled": "SelectiveKeepInventory was already disabled for %s!",
-  "selectivekeepinventory.config.disable_gravestones": "Disable Gravestones"
+
+  "message.selectivekeepinventory.autoenabled": "[SelectiveKeepInventory] \"KeepInv\" command tag was detected on your player, so selectivekeepinventory has been automatically enabled (more details in mod config).",
+
+
+  "selectivekeepinventory.config.disable_gravestones": "Disable Gravestones",
+  "selectivekeepinventory.config.keepinvtag_compat": "Account for KeepInvTag"
+
+
 
 
 }
