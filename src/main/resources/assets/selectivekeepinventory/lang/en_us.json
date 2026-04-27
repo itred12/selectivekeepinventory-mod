@@ -1,0 +1,23 @@
+{
+  "itemGroup.selectivekeepinventory": "Example Mod Tab",
+  "block.selectivekeepinventory.example_block": "Example Block",
+  "item.selectivekeepinventory.example_item": "Example Item",
+
+  "selectivekeepinventory.configuration.title": "Selective Keep Inventory Configs",
+  "selectivekeepinventory.configuration.section.selectivekeepinventory.common.toml": "Selective Keep Inventory Configs",
+  "selectivekeepinventory.configuration.section.selectivekeepinventory.common.toml.title": "Selective Keep Inventory Configs",
+  "selectivekeepinventory.configuration.items": "Item List",
+  "selectivekeepinventory.configuration.logDirtBlock": "Log Dirt Block",
+  "selectivekeepinventory.configuration.magicNumberIntroduction": "Magic Number Text",
+  "selectivekeepinventory.configuration.magicNumber": "Magic Number",
+
+
+  "message.selectivekeepinventory.enabledkeepinventory": "SelectiveKeepInventory has been enabled for %s",
+  "message.selectivekeepinventory.disabledkeepinventory": "SelectiveKeepInventory has been disabled for %s",
+  "message.selectivekeepinventory.querykeepinventory": "SelectiveKeepInventory for %s is set to: %s",
+
+  "message.selectivekeepinventory.alreadyenabled": "SelectiveKeepInventory was already enabled for %s!",
+  "message.selectivekeepinventory.alreadydisabled": "SelectiveKeepInventory was already disabled for %s!"
+
+
+}
