@@ -19,7 +19,6 @@ public class DeathEventsMixin {
     @ModifyExpressionValue(method = "playerDeath", at = @At(value = "INVOKE", target = "Lde/maxhenkel/gravestone/events/DeathEvents;keepInventory(Lnet/minecraft/world/entity/player/Player;)Z"))
     private static boolean addAltKeepInventoryCheck(boolean original, @Local(name = "player") Player player) {
 
-
         // Only try to disable gravestones if the config has been set
         if (SKIConfig.DISABLE_GRAVESTONES.get()) {
             // original is *before* inversion, so if either of these are true, then gravestones wont be placed.

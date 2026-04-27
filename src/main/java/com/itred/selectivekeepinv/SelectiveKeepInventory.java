@@ -3,9 +3,11 @@ package com.itred.selectivekeepinv;
 
 import com.itred.selectivekeepinv.attachement.SKIDataAttachments;
 import com.itred.selectivekeepinv.command.SKIEnableDisableCommand;
+import net.minecraft.world.entity.player.Player;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -42,6 +44,14 @@ public class SelectiveKeepInventory {
     @SubscribeEvent
     public static void onRegisterCommands(RegisterCommandsEvent event) {
         SKIEnableDisableCommand.registerCommand(event.getDispatcher());
+    }
+
+    @SubscribeEvent
+    public static void onPlayerDrops(LivingDropsEvent event) {
+        if (event.getEntity() instanceof Player && event.getEntity().getData(SKIDataAttachments.KEEPINV_ATTACHMENT)) {
+            // *May* be all I need for accessories compat???
+            event.setCanceled(true);
+        }
     }
 
 

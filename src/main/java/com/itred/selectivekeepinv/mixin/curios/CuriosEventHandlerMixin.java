@@ -22,7 +22,6 @@ public class CuriosEventHandlerMixin {
     @Inject(method = "lambda$playerDrops$12", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/GameRules;getBoolean(Lnet/minecraft/world/level/GameRules$Key;)Z", shift = At.Shift.BY, by = 2))
     private static void overrideKeepInventory(LivingDropsEvent evt, LivingEntity livingEntity, ICuriosItemHandler handler, CallbackInfo ci, @Local(name = "keepInventory") LocalBooleanRef keepInventory) {
 
-
         // If we've gotten this far, we already know the entity is a player.
         // keepInventory is currently the value of the keepInventory gamerule,
         // we only want to use the data attachment check if keepInventory is off, since it defaults to false, and would otherwise drop curios even if KeepInventory is enabled, lol...

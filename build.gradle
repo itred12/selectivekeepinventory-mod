@@ -147,6 +147,14 @@ dependencies {
     compileOnly("curse.maven:curios-309927:6529130")
     localRuntime("curse.maven:curios-309927:6529130")
 
+    // Accessories
+    compileOnly("curse.maven:accessories-938917:7046407")
+    localRuntime("curse.maven:accessories-938917:7046407")
+
+    // owolib (required for Accessories)
+    compileOnly("curse.maven:owo-532610:6785734")
+    localRuntime("curse.maven:owo-532610:6785734")
+
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
     // The group id is ignored when searching -- in this case, it is "blank"
