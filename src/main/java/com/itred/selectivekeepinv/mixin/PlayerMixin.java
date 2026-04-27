@@ -11,6 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class PlayerMixin {
 
 
+    // Prevent the player from dropping their equipment if they have the keep inventory attachment.
     @Inject(at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;destroyVanishingCursedItems()V"), method = "dropEquipment", cancellable = true)
     public void checkForKeepInventoryTag(CallbackInfo ci) {
 
