@@ -7,11 +7,11 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
-@Mod(value = SelectiveKeepInventory.MODID, dist = Dist.CLIENT)
-public class SKIClient {
+@Mod(value = IndividualKeepInventory.MODID, dist = Dist.CLIENT)
+public class IKIClient {
 
 
-    public SKIClient(IEventBus eventBus, ModContainer container) {
+    public IKIClient(IEventBus eventBus, ModContainer container) {
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
 
     }

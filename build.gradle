@@ -139,24 +139,24 @@ dependencies {
 
     // Gravestones-Curios compat
     compileOnly("curse.maven:gravestonecurioscompat-1139062:6201440")
-    localRuntime("curse.maven:gravestonecurioscompat-1139062:6201440")
+    //localRuntime("curse.maven:gravestonecurioscompat-1139062:6201440")
 
     // Curios
     compileOnly("curse.maven:curios-309927:6529130")
-    localRuntime("curse.maven:curios-309927:6529130")
+    //localRuntime("curse.maven:curios-309927:6529130")
 
     // Accessories
     compileOnly("curse.maven:accessories-938917:7046407")
-    localRuntime("curse.maven:accessories-938917:7046407")
+    //localRuntime("curse.maven:accessories-938917:7046407")
 
     // owolib (required for Accessories)
     compileOnly("curse.maven:owo-532610:6785734")
-    localRuntime("curse.maven:owo-532610:6785734")
+    //localRuntime("curse.maven:owo-532610:6785734")
 
     // aether (also has its own inventory section I'll prob have to account for)
     // Or not??? It just works lol. Nice.
     compileOnly("curse.maven:aether-255308:7043502")
-    localRuntime("curse.maven:aether-255308:7043502")
+    //localRuntime("curse.maven:aether-255308:7043502")
 
 
     // For more info:

@@ -1,0 +1,24 @@
+{
+  "itemGroup.individualkeepinventory": "Example Mod Tab",
+  "block.individualkeepinventory.example_block": "Example Block",
+  "item.individualkeepinventory.example_item": "Example Item",
+
+  "individualkeepinventory.configuration.title": "Individual Keep Inventory Configs",
+  "individualkeepinventory.configuration.section.individualkeepinventory.common.toml": "Individual Keep Inventory Configs",
+  "individualkeepinventory.configuration.section.individualkeepinventory.common.toml.title": "Individual Keep Inventory Configs",
+  "individualkeepinventory.configuration.items": "Item List",
+  "individualkeepinventory.configuration.logDirtBlock": "Log Dirt Block",
+  "individualkeepinventory.configuration.magicNumberIntroduction": "Magic Number Text",
+  "individualkeepinventory.configuration.magicNumber": "Magic Number",
+
+
+
+  "individualkeepinventory.config.disable_gravestones": "Disable Gravestones",
+  "individualkeepinventory.config.keepinvtag_compat": "Account for KeepInvTag",
+  "individualkeepinventory.config.playerlist": "Preset players",
+  "individualkeepinventory.config.toggle_command": "Enable Toggle Command"
+
+
+
+
+}

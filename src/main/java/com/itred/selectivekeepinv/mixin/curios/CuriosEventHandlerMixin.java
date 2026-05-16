@@ -1,6 +1,6 @@
 package com.itred.selectivekeepinv.mixin.curios;
 
-import com.itred.selectivekeepinv.attachement.SKIDataAttachments;
+import com.itred.selectivekeepinv.attachement.IKIDataAttachments;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.llamalad7.mixinextras.sugar.ref.LocalBooleanRef;
 import net.minecraft.world.entity.LivingEntity;
@@ -25,7 +25,7 @@ public class CuriosEventHandlerMixin {
         // If we've gotten this far, we already know the entity is a player.
         // keepInventory is currently the value of the keepInventory gamerule,
         // we only want to use the data attachment check if keepInventory is off, since it defaults to false, and would otherwise drop curios even if KeepInventory is enabled, lol...
-        if (!keepInventory.get() && livingEntity.getData(SKIDataAttachments.KEEPINV_ATTACHMENT)) {
+        if (!keepInventory.get() && livingEntity.getData(IKIDataAttachments.KEEPINV_ATTACHMENT)) {
             keepInventory.set(true);
         }
 

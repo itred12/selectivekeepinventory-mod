@@ -1,7 +1,7 @@
 package com.itred.selectivekeepinv.mixin.gravestone;
 
-import com.itred.selectivekeepinv.SKIConfig;
-import com.itred.selectivekeepinv.attachement.SKIDataAttachments;
+import com.itred.selectivekeepinv.IKIConfig;
+import com.itred.selectivekeepinv.attachement.IKIDataAttachments;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
 import de.maxhenkel.gravestone.events.DeathEvents;
@@ -20,10 +20,10 @@ public class DeathEventsMixin {
     private static boolean addAltKeepInventoryCheck(boolean original, @Local(name = "player") Player player) {
 
         // Only try to disable gravestones if the config has been set
-        if (SKIConfig.DISABLE_GRAVESTONES.get()) {
+        if (IKIConfig.DISABLE_GRAVESTONES.get()) {
             // original is *before* inversion, so if either of these are true, then gravestones wont be placed.
             // I think.
-            return (player.getData(SKIDataAttachments.KEEPINV_ATTACHMENT) || original);
+            return (player.getData(IKIDataAttachments.KEEPINV_ATTACHMENT) || original);
         } else {
             return original;
         }
