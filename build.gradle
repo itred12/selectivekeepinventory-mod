@@ -146,17 +146,24 @@ dependencies {
     //localRuntime("curse.maven:curios-309927:6529130")
 
     // Accessories
-    compileOnly("curse.maven:accessories-938917:7046407")
-    //localRuntime("curse.maven:accessories-938917:7046407")
+    compileOnly("curse.maven:accessories-938917:7583320")
+    localRuntime("curse.maven:accessories-938917:7583320")
 
     // owolib (required for Accessories)
     compileOnly("curse.maven:owo-532610:6785734")
-    //localRuntime("curse.maven:owo-532610:6785734")
+    localRuntime("curse.maven:owo-532610:6785734")
 
-    // aether (also has its own inventory section I'll prob have to account for)
+    // Aether (also has its own inventory section I'll prob have to account for)
     // Or not??? It just works lol. Nice.
     compileOnly("curse.maven:aether-255308:7043502")
     //localRuntime("curse.maven:aether-255308:7043502")
+
+    // Accesories compat layer, to fix items being voided
+    compileOnly("curse.maven:accessories-compat-layer-1315611:7585673")
+    localRuntime("curse.maven:accessories-compat-layer-1315611:7585673")
+
+    // Artifacts, to give me something to debug with
+    localRuntime("curse.maven:artifacts-312353:7875426")
 
 
     // For more info:

@@ -78,7 +78,7 @@ public class IKIEnableDisableCommand {
                 commandSource.getSource().sendSystemMessage(Component.literal("IndividualKeepInventory was already enabled for " + target.getDisplayName().getString() + "!"));
             } else {
                 target.setData(IKIDataAttachments.KEEPINV_ATTACHMENT, true);
-                commandSource.getSource().sendSuccess(() -> Component.literal("IndividualKeepInventory has been disabled for " + target.getDisplayName().getString()), true);
+                commandSource.getSource().sendSuccess(() -> Component.literal("IndividualKeepInventory has been enabled for " + target.getDisplayName().getString()), true);
             }
             return 1;
         };
