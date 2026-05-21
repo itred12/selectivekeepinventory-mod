@@ -3,21 +3,19 @@ package com.itred.selectivekeepinv;
 
 import com.itred.selectivekeepinv.attachement.IKIDataAttachments;
 import com.itred.selectivekeepinv.command.IKIEnableDisableCommand;
+import com.itred.selectivekeepinv.util.InventoryDropsManager;
+import com.mojang.logging.LogUtils;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.config.ModConfig;
-import net.neoforged.neoforge.event.RegisterCommandsEvent;
-import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
-import net.neoforged.neoforge.event.entity.player.PlayerEvent;
-import org.slf4j.Logger;
-
-import com.mojang.logging.LogUtils;
-
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
+import net.neoforged.neoforge.event.RegisterCommandsEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @EventBusSubscriber(modid = IndividualKeepInventory.MODID)
@@ -41,9 +39,6 @@ public class IndividualKeepInventory {
 
         IKIDataAttachments.ATTACHMENT_REGISTER.register(eventBus);
 
-
-
-
     }
 
 
@@ -52,16 +47,19 @@ public class IndividualKeepInventory {
         IKIEnableDisableCommand.registerCommand(event.getDispatcher());
     }
 
-    // Disable the player drops event entirely if the entity has the keep inventory attachment
-    // (Is this a bad idea?)
+
     @SubscribeEvent
-    public static void onPlayerDrops(LivingDropsEvent event) {
-        if (event.getEntity() instanceof Player && event.getEntity().getData(IKIDataAttachments.KEEPINV_ATTACHMENT)) {
-            // *May* be all I need for accessories compat???
-            // Probably should have been doing this before lol
-            // TODO: Test if this works over the somewhat intrusive mixins I've been using for Curios and Gravestones, I may switch.
-            event.setCanceled(true);
+    public static void onPlayerClone(PlayerEvent.Clone event) {
+
+        if (!event.isWasDeath()) {
+            return;
         }
+
+        Player newBody = event.getEntity();
+        Player oldBody = event.getOriginal();
+        InventoryDropsManager.playerDeathHandler(oldBody, newBody);
+
+
     }
 
     // Update players with the "KeepInv" command tag to automatically enable individualkeepinventory for them– only if the config option is enabled

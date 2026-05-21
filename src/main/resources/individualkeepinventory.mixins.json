@@ -3,10 +3,13 @@
   "package": "com.itred.selectivekeepinv.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+
     "PlayerMixin",
-    "ServerPlayerMixin",
-    "gravestone.DeathEventsMixin",
-    "curios.CuriosEventHandlerMixin"
+
+    "accessories.AccessoriesEventHandlerMixin",
+
+    "curios.CuriosEventHandlerMixin",
+    "gravestone.DeathEventsMixin"
   ],
   "injectors": {
     "defaultRequire": 1
