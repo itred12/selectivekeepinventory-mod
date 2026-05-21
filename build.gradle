@@ -165,6 +165,9 @@ dependencies {
     // Artifacts, to give me something to debug with
     //localRuntime("curse.maven:artifacts-312353:7875426")
 
+    // Was troubleshooting something
+    // Don't ask, I dont know
+    /*
     localRuntime("curse.maven:cosmetic-armor-reworked-forked-1434118:7685857")
     localRuntime("curse.maven:architectury-api-419699:5786327")
 
@@ -188,6 +191,8 @@ dependencies {
 
     compileOnly("curse.maven:supplementaries-412082:8051628")
     localRuntime("curse.maven:supplementaries-412082:8051628")
+
+     */
 
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
